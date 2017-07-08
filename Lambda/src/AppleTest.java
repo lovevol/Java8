@@ -36,6 +36,8 @@ public class AppleTest {
         inventory.sort(Comparator.comparing(o -> ((Integer) o.getWeight())));//lambda表达式
         inventory.sort(Comparator.comparing(Apple::getWeight));//方法引用
         System.out.println(inventory);
+        inventory.sort(Comparator.comparing(Apple::getWeight).reversed().thenComparing(Apple::getColor));//逆序和比较器链的使用
+        System.out.println(inventory);
     }
 
     public static <T> List<T> filter(List<T> list, Predicate<T> p) {

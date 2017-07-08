@@ -10,6 +10,7 @@ import java.io.IOException;
  */
 /*
 环绕执行模式
+即在方法所必需的代码中间，你需要执行点儿什么操作，比如资源分配和清理
 * */
 public class ExecuteAroundTest {
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * Created by lh
@@ -35,6 +36,12 @@ public class LambdaTest {
         stringList = Arrays.asList("a","C","b","D");
         stringList.sort((s1,s2)->s1.compareToIgnoreCase(s2));
         System.out.println(stringList);
+
+        Function<Integer,Integer> g = x->x+1;
+        Function<Integer,Integer> h = x->x*2;
+        Function<Integer,Integer> f = g.compose(h);
+        int result = f.apply(8);
+        System.out.println(result);
 
 
 
