@@ -2,7 +2,7 @@
  * Created by lh
  * on 2017/7/8.
  */
-public class Apple {
+public class Apple{
     private int weight;
     private String color;
     public Apple(int w, String c){
